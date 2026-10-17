@@ -1,6 +1,6 @@
 # omnilex/judilibre
 
-Judilibre for [glitchr/omnilex](https://github.com/glitchr-studio/omnilex): the decisions of
+Judilibre for [omniscient/omnilex](https://github.com/glitchr-studio/omnilex): the decisions of
 the Cour de cassation and of the judicial courts, published as open data by the Cour de
 cassation through PISTE - a full-text search with filters, one decision whole, the texts it
 applies and the case law it is brought together with, what changed since a date.
