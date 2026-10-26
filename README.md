@@ -49,7 +49,7 @@ This package was written from the API's public OpenAPI description, without PIST
 **no call was made to the real API**. The tests run on the examples that description gives.
 `.samples/live.php` of the workspace runs a real search and reads a real decision as soon as
 `PISTE_CLIENT_ID` and `PISTE_CLIENT_SECRET` are set. See
-[what is not verified](docs/index.md#not-verified).
+[what is not verified](docs/index.md#verified-and-not).
 
 ## What you need to obtain
 
