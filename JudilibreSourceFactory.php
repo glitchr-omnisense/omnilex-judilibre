@@ -40,7 +40,7 @@ final class JudilibreSourceFactory extends SourceFactory
     protected function build(Config $c): SourceInterface
     {
         $http = $this->http ?? HttpClient::create(['timeout' => 30]);
-        $sandbox = (bool) $c['sandbox'];
+        $sandbox = $c->bool('sandbox');
         $headers = ['User-Agent' => self::userAgent($c)];
         $auth = null;
         if (null !== $c->get('key_id')) {
@@ -58,7 +58,7 @@ final class JudilibreSourceFactory extends SourceFactory
             $headers,
             (float) $c['throttle'],
             (string) $c->get('recent', 'update'),
-            (bool) $c['resolve_references'],
+            $c->bool('resolve_references'),
         );
     }
 }

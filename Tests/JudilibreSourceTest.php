@@ -316,6 +316,29 @@ final class JudilibreSourceTest extends TestCase
         (new JudilibreSourceFactory(new MockHttpClient()))->create();
     }
 
+    /** Options given by environment variables arrive as strings: "false" is false. */
+    public function testABooleanOptionGivenAsAString(): void
+    {
+        $this->source(['sandbox' => 'false', 'resolve_references' => 'false'])->decision(self::ID);
+        self::assertNotSame(Piste::SANDBOX_TOKEN_URI, $this->calls[0]['path'], 'sandbox "false": the production');
+        self::assertSame(['false'], $this->calls[1]['query']['resolve_references'] ?? ['false']);
+
+        $this->calls = [];
+        $this->source(['sandbox' => '1'])->decision(self::ID);
+        self::assertSame(Piste::SANDBOX_TOKEN_URI, $this->calls[0]['path']);
+    }
+
+    /** A recent() mode it does not know is a misconfigured source, which Registry::usable() leaves out. */
+    public function testAnUnknownRecentIsAnInvalidConfig(): void
+    {
+        $registry = new \Omnilex\Registry([new JudilibreSourceFactory(new MockHttpClient())], ['judilibre' => ['factory' => 'judilibre', 'options' => ['key_id' => 'k', 'recent' => 'yesterday']]]);
+        self::assertSame([], $registry->usable());
+
+        $this->expectException(InvalidConfigException::class);
+        $this->expectExceptionMessage('recent() reads "update" or "creation", not "yesterday".');
+        $registry->get('judilibre');
+    }
+
     public function testRefusedBlockedOrSlowedIsNeverNotFound(): void
     {
         $token = static fn () => new MockResponse('{"access_token":"t","expires_in":3600}');

@@ -53,9 +53,9 @@ vault.
 |---|---|---|---|---|
 | `client_id`, `client_secret` | string | `null` | these two, or `key_id` | OAuth through PISTE |
 | `key_id` | string | `null` | | the API key; when set, the OAuth pair is not used |
-| `sandbox` | bool | `false` | no | PISTE's sandbox, with the sandbox application's credentials |
-| `recent` | `update` or `creation` | `update` | no | the `date_type` `recent()` reads: `update` (created or updated in the base) or `creation`; another value is an `InvalidArgumentException` |
-| `resolve_references` | bool | `false` | no | `resolve_references=true` on every call: labels in place of keys in the answers |
+| `sandbox` | bool (`"false"`, `"0"` false) | `false` | no | PISTE's sandbox, with the sandbox application's credentials |
+| `recent` | `update` or `creation` | `update` | no | the `date_type` `recent()` reads: `update` (created or updated in the base) or `creation`; another value is an `InvalidConfigException` (which `Registry::usable()` leaves out) |
+| `resolve_references` | bool (`"false"`, `"0"` false) | `false` | no | `resolve_references=true` on every call: labels in place of keys in the answers |
 | `throttle` | float | `0.5` | no | seconds between two calls (the quotas are per application, on the portal) |
 | `base_uri` | string | production's or the sandbox's | no | |
 | `token_uri` | string | PISTE's or the sandbox's | no | |
@@ -64,11 +64,6 @@ vault.
 Neither `key_id` nor both OAuth options: an `InvalidConfigException` when the source is built
 (`Registry::usable()` leaves it out). Without an HTTP client, the factory makes one with a
 30-second timeout.
-
-> [!WARNING]
-> Known defect: `sandbox` and `resolve_references` are read with PHP's `(bool)`: the string
-> `'false'` is true. And a `recent` other than its two values is an `InvalidArgumentException`,
-> not an `InvalidConfigException`, which `Registry::usable()` does not skip.
 
 ## Capabilities
 

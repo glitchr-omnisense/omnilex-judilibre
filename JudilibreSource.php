@@ -3,6 +3,7 @@
 namespace Omnilex\Judilibre;
 
 use Omnilex\Auth\TokenProviderInterface;
+use Omnilex\Exception\InvalidConfigException;
 use Omnilex\Exception\NotSupportedException;
 use Omnilex\Model\Capabilities;
 use Omnilex\Model\Citation;
@@ -71,7 +72,7 @@ final class JudilibreSource extends HttpSource implements SearchInterface, Decis
         private readonly bool $resolve = false,
     ) {
         if (!\in_array($recent, ['update', 'creation'], true)) {
-            throw new \InvalidArgumentException(\sprintf('recent() reads "update" or "creation", not "%s".', $recent));
+            throw new InvalidConfigException(\sprintf('recent() reads "update" or "creation", not "%s".', $recent));
         }
         parent::__construct($http, $baseUri, $headers, $throttle, $auth);
     }
