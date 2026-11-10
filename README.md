@@ -78,6 +78,17 @@ application (a quota spent comes back as a `RateLimitedException`).
 
 See [docs/](docs/index.md).
 
+## Usage policy
+
+Declared as data in [`policy.json`](policy.json) (read at https://piste.gouv.fr/images/cgu/CGU_open_data_V8.pdf on 2026-11-10), and honoured on every request by the
+core: a limit reached waits when its window ends within `max_wait` seconds, else the request is not
+sent ([Usage policies](https://github.com/glitchr-omnisense/omnilex/blob/1.x/docs/policies.md)).
+
+- Limits: not published (unknown).
+- Licence: etalab-2.0; commercial use: allowed.
+- Credit: required: Source : base de données Open Data de la Cour de cassation (Judilibre), mise à jour du <date> (https://www.courdecassation.fr).
+- Needs: a key.
+
 ## Responsibility
 
 This package is an independent, unofficial client: it is not affiliated with, endorsed by or

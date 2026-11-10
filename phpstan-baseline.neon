@@ -1,0 +1,409 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Binary operation "\." between ''n° '' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: JudilibreSource.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 3
+			path: JudilibreSource.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 25
+			path: JudilibreSource.php
+
+		-
+			message: '#^Method Omnilex\\Judilibre\\JudilibreSource\:\:taxonomy\(\) should return array\<string, string\> but returns array\<string\>\.$#'
+			identifier: return.type
+			count: 1
+			path: JudilibreSource.php
+
+		-
+			message: '#^Parameter \#1 \$array \(list\<string\>\) of array_values is already a list, call has no effect\.$#'
+			identifier: arrayValues.list
+			count: 2
+			path: JudilibreSource.php
+
+		-
+			message: '#^Parameter \#1 \$callback of function array_map expects \(callable\(mixed\)\: mixed\)\|null, ''strval'' given\.$#'
+			identifier: argument.type
+			count: 2
+			path: JudilibreSource.php
+
+		-
+			message: '#^Parameter \#1 \$callback of function array_map expects \(callable\(non\-empty\-array\<mixed, mixed\>\)\: mixed\)\|null, Closure\(array\<string, mixed\>\)\: Omnilex\\Model\\Reference given\.$#'
+			identifier: argument.type
+			count: 2
+			path: JudilibreSource.php
+
+		-
+			message: '#^Parameter \#1 \$data of method Omnilex\\Judilibre\\JudilibreSource\:\:toDecision\(\) expects array\<string, mixed\>, array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: JudilibreSource.php
+
+		-
+			message: '#^Parameter \#1 \$link of method Omnilex\\Judilibre\\JudilibreSource\:\:decisionLink\(\) expects array\<string, mixed\>, array\<mixed\> given\.$#'
+			identifier: argument.type
+			count: 2
+			path: JudilibreSource.php
+
+		-
+			message: '#^Parameter \#1 \$link of method Omnilex\\Judilibre\\JudilibreSource\:\:textLink\(\) expects array\<string, mixed\>, array\<mixed, mixed\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: JudilibreSource.php
+
+		-
+			message: '#^Parameter \#1 \$value of static method Omnilex\\Source\\HttpSource\:\:day\(\) expects int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 5
+			path: JudilibreSource.php
+
+		-
+			message: '#^Parameter \#4 \$chamber of class Omnilex\\Model\\Court constructor expects string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: JudilibreSource.php
+
+		-
+			message: '#^Parameter \#6 \$location of class Omnilex\\Model\\Court constructor expects string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: JudilibreSource.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>citations" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: JudilibreSource.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>value" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 2
+			path: JudilibreSource.php
+
+		-
+			message: '#^Cannot cast mixed to float\.$#'
+			identifier: cast.double
+			count: 1
+			path: JudilibreSourceFactory.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 5
+			path: JudilibreSourceFactory.php
+
+		-
+			message: '#^Parameter \#7 \$tokenUri of static method Omnilex\\Auth\\Piste\:\:credentials\(\) expects string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: JudilibreSourceFactory.php
+
+		-
+			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Call to an undefined method Omnilex\\Source\\SourceInterface\:\:decision\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Call to an undefined method Omnilex\\Source\\SourceInterface\:\:recent\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Call to an undefined method Omnilex\\Source\\SourceInterface\:\:search\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access offset ''headers'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access offset ''keyid'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access offset ''motivations'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access offset ''path'' on array\{path\: string, query\: array\<string, list\<string\>\>, headers\: array\<string, string\>\}\|false\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 3
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access offset ''path'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access offset ''query'' on array\{path\: string, query\: array\<string, list\<string\>\>, headers\: array\<string, string\>\}\|false\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 8
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access offset ''query'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access offset ''resolve_references'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access offset 0 on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$chamber on Omnilex\\Model\\Court\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$citations on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$code on Omnilex\\Model\\Court\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$content on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 2
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$country on Omnilex\\Model\\Court\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$date on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$formation on Omnilex\\Model\\Court\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$id on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$identifiers on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$language on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$location on Omnilex\\Model\\Court\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$name on Omnilex\\Model\\Court\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$number on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$numbers on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$pseudonymised on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$publication on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$raw on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 2
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$solution on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$subjects on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 2
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$title on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$type on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot access property \$updatedOn on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot call method ecli\(\) on Omnilex\\Model\\Decision\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Cannot call method format\(\) on DateTimeImmutable\|null\.$#'
+			identifier: method.nonObject
+			count: 5
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Method Omnilex\\Judilibre\\Tests\\JudilibreSourceTest\:\:source\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Method Omnilex\\Judilibre\\Tests\\JudilibreSourceTest\:\:source\(\) should return Omnilex\\Judilibre\\JudilibreSource but returns Omnilex\\Source\\SourceInterface\.$#'
+			identifier: return.type
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Offset 0 does not exist on array\{\}\.$#'
+			identifier: offsetAccess.notFound
+			count: 4
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Parameter \#1 \$object of function get_object_vars expects object, Omnilex\\Model\\Decision\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Parameter \#1 \$options of method Omnilex\\Source\\SourceFactory\:\:create\(\) expects array\<string, mixed\>, array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Parameter \#1 \$string of function strlen expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Parameter \#1 \$string of function substr expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Parameter \#2 \$array of static method PHPUnit\\Framework\\Assert\:\:assertArrayNotHasKey\(\) expects array\<mixed\>\|ArrayAccess\<\(int\|string\), mixed\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Parameter \#2 \$haystack of static method PHPUnit\\Framework\\Assert\:\:assertStringContainsString\(\) expects string, string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Parameter \#2 \$haystack of static method PHPUnit\\Framework\\Assert\:\:assertStringNotContainsString\(\) expects string, string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Parameter \#2 \$string of static method PHPUnit\\Framework\\Assert\:\:assertStringStartsWith\(\) expects string, string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Possibly invalid array key type mixed\.$#'
+			identifier: offsetAccess.invalidOffset
+			count: 1
+			path: Tests/JudilibreSourceTest.php
+
+		-
+			message: '#^Property Omnilex\\Judilibre\\Tests\\JudilibreSourceTest\:\:\$calls \(list\<array\{path\: string, query\: array\<string, list\<string\>\>, headers\: array\<string, string\>\}\>\) does not accept non\-empty\-list\<array\{path\: string, query\: array\<string, list\<string\>\>, headers\: array\<string\>\}\>\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: Tests/JudilibreSourceTest.php
