@@ -25,6 +25,14 @@ omnilex:
         judilibre: { factory: judilibre, options: { client_id: '%env(PISTE_CLIENT_ID)%', client_secret: '%env(PISTE_CLIENT_SECRET)%' } }
 ```
 
+## Install
+
+```sh
+composer require omnilex/judilibre
+```
+
+It brings the family's core, `omnisense/omnilex`, and `omnisense/contracts` with it. **A PISTE account is needed** (free, piste.gouv.fr), with an application subscribed to Judilibre: its OAuth client credentials (below). Without one, the tests run on recorded answers; for a first call with no account, take `omnilex/justice-administrative` or `omnilex/eurlex`.
+
 ## Pseudonymised decisions: never re-identified
 
 The decisions Judilibre publishes are pseudonymised by the Cour de cassation before
